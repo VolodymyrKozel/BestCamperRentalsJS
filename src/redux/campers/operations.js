@@ -1,13 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-
-const URL_API = 'https://connections-api.herokuapp.com';
+import instance from '../../services/instance';
 
 export const fetchCampers = createAsyncThunk(
   'Campers/fetchCampers',
-  async (_, thunkAPI) => {
+  async (params, thunkAPI) => {
     try {
-      const res = await axios.get(`${URL_API}/Campers`);
+      const res = await instance.get(`/campers`, { params });
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -19,7 +17,7 @@ export const addCamper = createAsyncThunk(
   'Campers/addCamper',
   async (camper, thunkAPI) => {
     try {
-      const res = await axios.post(`${URL_API}/Campers`, camper);
+      const res = await instance.post(`/campers`, camper);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -31,7 +29,7 @@ export const deleteCamper = createAsyncThunk(
   'Campers/deleteCamper',
   async (camperId, thunkAPI) => {
     try {
-      const res = await axios.delete(`${URL_API}/Campers/${camperId}`);
+      const res = await instance.delete(`/campers/${camperId}`);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -44,7 +42,7 @@ export const editCamper = createAsyncThunk(
   async (camper, thunkAPI) => {
     const { name, number } = camper;
     try {
-      const res = await axios.patch(`${URL_API}/Campers/${camper.id}`, {
+      const res = await instance.patch(`/campers/${camper.id}`, {
         name,
         number,
       });

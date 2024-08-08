@@ -19,28 +19,28 @@ export const campersSlice = createSlice({
   name: 'campers',
   initialState: {
     items: [],
-    loading: false,
+    isLoading: false,
     error: null,
   },
   extraReducers: builder => {
     builder
       .addCase(fetchCampers.pending, handlePending)
       .addCase(fetchCampers.fulfilled, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.error = null;
         state.items = action.payload;
       })
       .addCase(fetchCampers.rejected, handleRejected)
       .addCase(addCamper.pending, handlePending)
       .addCase(addCamper.fulfilled, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.error = null;
         state.items.push(action.payload);
       })
       .addCase(addCamper.rejected, handleRejected)
       .addCase(deleteCamper.pending, handlePending)
       .addCase(deleteCamper.fulfilled, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.error = null;
         const index = state.items.findIndex(
           item => item.id === action.payload.id
@@ -50,7 +50,7 @@ export const campersSlice = createSlice({
       .addCase(deleteCamper.rejected, handleRejected)
       .addCase(editCamper.pending, handlePending)
       .addCase(editCamper.fulfilled, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.error = null;
         const index = state.items.findIndex(
           item => item.id === action.payload.id
@@ -61,4 +61,4 @@ export const campersSlice = createSlice({
   },
 });
 
-export const Reducer = CampersSlice.reducer;
+export const campersReducer = campersSlice.reducer;

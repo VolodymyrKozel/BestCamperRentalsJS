@@ -1,3 +1,8 @@
+import DocumentTitle from '../../components/DocumentTitle';
 export default function CatalogPage() {
-  return <div>CatalogPage</div>;
+  return (
+    <div>
+      <DocumentTitle>Catalog</DocumentTitle>
+    </div>
+  );
 }

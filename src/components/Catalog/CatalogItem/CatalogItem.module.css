@@ -1,0 +1,78 @@
+.item {
+  display: flex;
+  gap: 24px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  height: 358px;
+}
+
+.img {
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+}
+.info {
+  width: 526px;
+  height: 310px;
+}
+.itemHeader {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--main);
+  margin-right: auto;
+}
+.price {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--main);
+}
+.icon {
+  margin-right: 4px;
+  fill: transparent;
+}
+.subHeader {
+  display: flex;
+  gap: 16px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+  margin-bottom: 24px;
+}
+
+.iconStar {
+  stroke: var(--rating);
+  fill: var(--rating);
+  margin-right: 4px;
+}
+
+.rating {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 24px;
+}

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-export default function NavBar() {
+export default function NavBar({ children }) {
   return (
     <nav>
       <ul>
@@ -14,6 +14,8 @@ export default function NavBar() {
           <NavLink to="/favorite">Favorite</NavLink>
         </li>
       </ul>
+
+      {children}
     </nav>
   );
 }

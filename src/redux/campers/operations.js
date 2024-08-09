@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import instance from '../../services/instance';
 
 export const fetchCampers = createAsyncThunk(
-  'Campers/fetchCampers',
+  'campers/fetchCampers',
   async (params, thunkAPI) => {
     try {
       const res = await instance.get(`/campers`, { params });
@@ -14,7 +14,7 @@ export const fetchCampers = createAsyncThunk(
 );
 
 export const addCamper = createAsyncThunk(
-  'Campers/addCamper',
+  'campers/addCamper',
   async (camper, thunkAPI) => {
     try {
       const res = await instance.post(`/campers`, camper);
@@ -26,7 +26,7 @@ export const addCamper = createAsyncThunk(
 );
 
 export const deleteCamper = createAsyncThunk(
-  'Campers/deleteCamper',
+  'campers/deleteCamper',
   async (camperId, thunkAPI) => {
     try {
       const res = await instance.delete(`/campers/${camperId}`);
@@ -38,14 +38,10 @@ export const deleteCamper = createAsyncThunk(
 );
 
 export const editCamper = createAsyncThunk(
-  'Campers/editCamper',
+  'campers/editCamper',
   async (camper, thunkAPI) => {
-    const { name, number } = camper;
     try {
-      const res = await instance.patch(`/campers/${camper.id}`, {
-        name,
-        number,
-      });
+      const res = await instance.patch(`/campers/${camper.id}`, camper);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

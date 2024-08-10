@@ -1,18 +1,20 @@
 import css from './CheckBox.module.css';
-import
+import Icon from '../Icon/Icon';
 
 const CheckboxButton = ({ checked, onChange, icon }) => {
   return (
-    <label className="checkbox-button">
+    <label className={css.checkboxBtn} htmlFor="checkbox-button">
       <input
+        id="checkbox-button"
         type="checkbox"
         checked={checked}
         onChange={onChange}
-        className="checkbox-button-input"
+        className={css.checkboxBtnInput}
       />
-      <div className="checkbox-button-box">
-        <div className="checkbox-button-icon">
-          <Icon id={icon} width={20} height={20} /> 
+      <div className={css.checkboxBtnBox}>
+        <div className={css.checkboxBtnIcon}>
+          <Icon className={css.icon} id={icon} width={32} height={32} />
+          AC
         </div>
       </div>
     </label>

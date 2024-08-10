@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import {
   addCamper,
   fetchCampers,
+  fetchCamperById,
   deleteCamper,
   editCamper,
 } from './operations';
@@ -21,16 +22,26 @@ export const campersSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
+    hasMore: false,
   },
+
   extraReducers: builder => {
     builder
       .addCase(fetchCampers.pending, handlePending)
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = action.payload;
+        state.items = [...state.items, ...action.payload.data];
+        state.hasMore = !action.payload.isLastPage;
       })
       .addCase(fetchCampers.rejected, handleRejected)
+      .addCase(fetchCamperById.pending, handlePending)
+      .addCase(fetchCamperById.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = [...state.items, action.payload];
+      })
+      .addCase(fetchCamperById.rejected, handleRejected)
       .addCase(addCamper.pending, handlePending)
       .addCase(addCamper.fulfilled, (state, action) => {
         state.isLoading = false;

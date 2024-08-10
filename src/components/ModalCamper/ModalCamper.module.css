@@ -1,28 +1,19 @@
+.modal {
+  position: relative;
+  width: 982px;
+  padding: 40px;
+}
+.list {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 24px;
+}
 .item {
-  display: flex;
-  gap: 24px;
-  border: 1px solid rgba(16, 24, 40, 0.2);
-  border-radius: 20px;
-  padding: 24px;
-  width: 888px;
-  height: 358px;
-}
-
-.img {
-  border-radius: 10px;
-  width: 290px;
-  height: 310px;
-  object-fit: cover;
-}
-.info {
-  width: 526px;
-  height: 310px;
-}
-.itemHeader {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 8px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2%;
+  color: var(--main);
 }
 .title {
   font-family: var(--font-family);
@@ -34,6 +25,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 8px;
 }
 .price {
   font-family: var(--font-family);
@@ -41,6 +33,7 @@
   font-size: 24px;
   line-height: 1.25;
   color: var(--main);
+  margin-bottom: 24px;
 }
 .icon {
   margin-right: 4px;
@@ -54,7 +47,7 @@
   font-size: 16px;
   line-height: 1.5;
   color: var(--main);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .iconStar {
@@ -62,23 +55,31 @@
   fill: var(--rating);
   margin-right: 4px;
 }
-
 .rating {
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }
-
 .description {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 24px;
+  margin-bottom: 44px;
 }
-.link {
-  color: currentColor;
+.closeButton {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.iconClose {
+  stroke: var(--main);
+  transition: stroke 0.3s ease-in-out;
+}
+.closeButton:hover .iconClose {
+  stroke: var(--button);
 }

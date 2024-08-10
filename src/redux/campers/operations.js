@@ -6,6 +6,20 @@ export const fetchCampers = createAsyncThunk(
   async (params, thunkAPI) => {
     try {
       const res = await instance.get(`/campers`, { params });
+      return {
+        data: res.data,
+        isLastPage: res.data.length < params.limit,
+      };
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+export const fetchCamperById = createAsyncThunk(
+  'campers/fetchCamperById',
+  async (id, thunkAPI) => {
+    try {
+      const res = await instance.get(`/campers/${id}`);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

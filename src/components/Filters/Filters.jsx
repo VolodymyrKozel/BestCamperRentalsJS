@@ -1,14 +1,22 @@
 import css from './Filters.module.css';
 import Icon from '../ui/Icon/Icon';
 import Button from '../ui/Button/Button';
+import CheckboxButton from '../ui/CheckBox/CheckBox';
+import { useState } from 'react';
 
 export default function Filters() {
+  const [checked, setChecked] = useState(false);
+  const handleCheck = () => {
+    setChecked(!checked);
+  };
   return (
     <>
-      <label className={css.label}>Location</label>
-      <Button className={css.button} variant="outline" size="medium">
-        <Icon className={css.icon} id="location" width={20} height={20} />
-      </Button>
+      <label className={css.label}>Filters</label>
+      <CheckboxButton
+        checked={checked}
+        onChange={handleCheck}
+        icon="location"
+      />
     </>
   );
 }

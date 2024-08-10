@@ -2,8 +2,10 @@ import Icon from '../../../components/ui/Icon/Icon';
 import Features from '../../Features/Features';
 import Button from '../../ui/Button/Button';
 import css from './CatalogItem.module.css';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function CatalogItem(props) {
+  const location = useLocation();
   return (
     <li className={css.item}>
       <img className={css.img} src={props.gallery[0]} alt={props.name} />
@@ -29,7 +31,9 @@ export default function CatalogItem(props) {
         <p className={css.description}>{props.description}</p>
         <Features {...props} />
         <Button variant="primary" size="medium">
-          Show more
+          <Link className={css.link} to={`${props._id}`} state={location}>
+            Show more
+          </Link>
         </Button>
       </div>
     </li>

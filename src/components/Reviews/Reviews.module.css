@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  gap: 24px;
+}
+.reviews {
+  width: 430px;
+}
+.avatar {
+  text-align: center;
+  padding: 16px;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  background-color: #f2f4f7;
+}
+.initials {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--button);
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.author {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--main);
+  margin-bottom: 4px;
+}
+
+.iconStar {
+  fill: var(--rating);
+  stroke: var(--rating);
+  margin-right: 4px;
+}
+.comment {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+
+  margin-bottom: 24px;
+}

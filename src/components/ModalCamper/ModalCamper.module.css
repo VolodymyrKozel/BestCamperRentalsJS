@@ -1,80 +1,8 @@
 .modal {
   position: relative;
   width: 982px;
+  min-height: 100vh;
   padding: 40px;
-}
-.list {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 24px;
-}
-.item {
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.2%;
-  color: var(--main);
-}
-.title {
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.25;
-  color: var(--main);
-  margin-right: auto;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 8px;
-}
-.price {
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.25;
-  color: var(--main);
-  margin-bottom: 24px;
-}
-.icon {
-  margin-right: 4px;
-  fill: transparent;
-}
-.subHeader {
-  display: flex;
-  gap: 16px;
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--main);
-  margin-bottom: 16px;
-}
-
-.iconStar {
-  stroke: var(--rating);
-  fill: var(--rating);
-  margin-right: 4px;
-}
-.rating {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-}
-.description {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--text);
-  margin-bottom: 44px;
-}
-.closeButton {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
 }
 .iconClose {
   stroke: var(--main);
@@ -84,36 +12,12 @@
   stroke: var(--button);
 }
 
-.link {
-  position: relative;
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--main);
-}
-/* .link:hover {
-  border-bottom: 5px solid var(--button);
-} */
-.link::after,
-.active::after {
-  content: '';
+.closeButton {
   position: absolute;
-  bottom: -28px;
-  left: 0;
-  width: 0;
-  height: 5px;
-  background-color: var(--button);
-  transition: width 0.3s ease-in-out;
-}
-.link:hover::after {
-  width: 100%;
-}
-
-.active::after {
-  width: 100%;
-}
-.line {
-  width: 100%;
-  border-bottom: 1px solid rgba(16, 24, 40, 0.2);
+  top: 40px;
+  right: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
 }

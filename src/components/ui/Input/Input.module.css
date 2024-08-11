@@ -1,9 +1,10 @@
 .input {
   border-radius: 10px;
   padding: 18px;
-  width: 360px;
-  height: 56px;
+  min-width: fit-content;
   background: var(--inputs);
+  border: none;
+  outline: none;
 
   font-family: var(--font-family);
   font-weight: 400;

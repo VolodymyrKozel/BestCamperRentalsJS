@@ -1,11 +1,12 @@
 import Icon from '../../../components/ui/Icon/Icon';
 import Features from '../../Features/Features';
 import Button from '../../ui/Button/Button';
+import FavoriteButton from '../../FavoriteButton/FavoriteButton';
 import css from './CatalogItem.module.css';
 import { Link, useLocation } from 'react-router-dom';
-
 export default function CatalogItem(props) {
   const location = useLocation();
+
   return (
     <li className={css.item}>
       <img className={css.img} src={props.gallery[0]} alt={props.name} />
@@ -16,7 +17,7 @@ export default function CatalogItem(props) {
             &euro;
             {props.price.toFixed(2)}
           </p>
-          <Icon className={css.icon} id="heart" width={20} height={20} />
+          <FavoriteButton item={props} />
         </div>
         <div className={css.subHeader}>
           <p className={css.rating}>

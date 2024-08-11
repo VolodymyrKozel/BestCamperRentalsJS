@@ -23,6 +23,7 @@ export const campersSlice = createSlice({
     isLoading: false,
     error: null,
     hasMore: false,
+    page: 1,
   },
 
   extraReducers: builder => {
@@ -31,7 +32,11 @@ export const campersSlice = createSlice({
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = [...state.items, ...action.payload.data];
+        state.items =
+          state.items.length === 0
+            ? action.payload.data
+            : [...state.items, ...action.payload.data];
+        state.page += 1;
         state.hasMore = !action.payload.isLastPage;
       })
       .addCase(fetchCampers.rejected, handleRejected)
@@ -39,7 +44,7 @@ export const campersSlice = createSlice({
       .addCase(fetchCamperById.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = [...state.items, action.payload];
+        state.items.push(action.payload);
       })
       .addCase(fetchCamperById.rejected, handleRejected)
       .addCase(addCamper.pending, handlePending)

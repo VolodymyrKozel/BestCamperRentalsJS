@@ -6,9 +6,15 @@ export const fetchCampers = createAsyncThunk(
   async (params, thunkAPI) => {
     try {
       const res = await instance.get(`/campers`, { params });
+      console.log(
+        'params',
+        parseInt(params.limit) + 'res.data',
+        res.data.length + 'params.limit',
+        res.data.length < parseInt(params.limit)
+      );
       return {
         data: res.data,
-        isLastPage: res.data.length < params.limit,
+        isLastPage: res.data.length < parseInt(params.limit),
       };
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

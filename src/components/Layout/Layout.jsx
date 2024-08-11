@@ -4,7 +4,7 @@ import Loader from '../Loader/Loader';
 export default function Layout({ children }) {
   return (
     <div className={css.container}>
-      <Suspense fallback={<Loader />}>{children}</Suspense>
+      <Suspense fallback={<Loader style={'full'} />}>{children}</Suspense>
     </div>
   );
 }

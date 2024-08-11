@@ -65,9 +65,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-      <section>
-        <h2 className={css.heading + ' ' + css.color}>Featured campers</h2>
-      </section>
     </>
   );
 }

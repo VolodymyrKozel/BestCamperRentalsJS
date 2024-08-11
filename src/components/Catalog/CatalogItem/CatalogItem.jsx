@@ -32,7 +32,10 @@ export default function CatalogItem(props) {
         <p className={css.description}>{props.description}</p>
         <Features {...props} />
         <Button variant="primary" size="medium">
-          <Link className={css.link} to={`${props._id}`} state={location}>
+          <Link
+            className={css.link}
+            to={`/catalog/${props._id}`}
+            state={location}>
             Show more
           </Link>
         </Button>

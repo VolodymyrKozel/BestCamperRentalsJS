@@ -31,6 +31,7 @@ export default function Catalog() {
       dispatch(fetchCampers({ page, limit: 4 }));
     }
   };
+
   return (
     error && <p>{error}</p>,
     campers.length > 0 && (

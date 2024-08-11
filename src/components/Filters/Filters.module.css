@@ -7,3 +7,14 @@
   color: rgba(16, 24, 40, 0.6);
   margin-bottom: 8px;
 }
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 64px;
+}
+.title {
+  margin-bottom: 24px;
+}
+.form {
+}

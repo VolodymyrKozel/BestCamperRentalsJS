@@ -13,6 +13,6 @@ export default function LoadMoreBtn({ hasMore, loadMore, loading }) {
       {loading ? <Loader style={'btn'} /> : 'Load more'}
     </Button>
   ) : (
-    <p>No more campers</p>
+    <p className={css.noMore}>No more campers</p>
   );
 }

@@ -18,17 +18,18 @@ export default function App() {
         <NavBar />
       </Header>
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/catalog/:id" element={<ModalCamper />}>
-          <Route path="features" element={<FeaturesSubPage />} />
-          <Route path="reviews" element={<Reviews />} />
-        </Route>
-
-        <Route path="/favorite" element={<FavoritePage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<ModalCamper />}>
+            <Route path="features" element={<FeaturesSubPage />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+          <Route path="/favorite" element={<FavoritePage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
     </Layout>
   );
 }

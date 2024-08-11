@@ -16,9 +16,12 @@ const FavoriteButton = ({ item }) => {
       dispatch(addFavorite(item));
     }
   };
-
   return (
-    <button onClick={handleClick} className={css.favoriteButton}>
+    <button
+      onClick={handleClick}
+      className={css.favoriteButton}
+      type="button"
+      title={item.isFavorite ? 'Remove from favorites' : 'Add to favorites'}>
       <Icon
         className={isFavorite ? css.iconFavoriteActive : css.iconFavorite}
         id="heart"

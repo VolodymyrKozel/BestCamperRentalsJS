@@ -1,0 +1,74 @@
+.hero {
+  position: relative;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  padding: 32px;
+  width: 40%;
+}
+.heading {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--background);
+  margin-bottom: 16px;
+  margin-bottom: 24px;
+}
+.subtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--background);
+  margin-bottom: 24px;
+}
+.img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.howItWorks {
+  padding: 100px 0;
+}
+.list {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+.buttonWrapper {
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--main);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.color {
+  color: var(--main);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.text {
+  text-align: center;
+}

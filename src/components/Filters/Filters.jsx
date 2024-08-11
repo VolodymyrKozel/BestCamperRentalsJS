@@ -5,7 +5,7 @@ import { Controller, useForm } from 'react-hook-form';
 
 export default function Filters() {
   const { control, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {};
   return (
     <>
       <form className={css.form} onSubmit={handleSubmit(onSubmit)}>

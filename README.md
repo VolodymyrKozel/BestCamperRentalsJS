@@ -1,4 +1,4 @@
-#Camper Rental App
+# Camper Rental App
 
 - Welcome to the Camper Rental App repository! This project is a web application
 - designed to make renting campers easy and convenient. Whether you're planning
@@ -15,7 +15,7 @@ and see ratings for each camper. Favorites: Save your favorite campers for quick
 access later. Booking System: Reserve a camper with just a few clicks, and
 manage your bookings easily.
 
-#Tech Stack
+# Tech Stack
 
 - Frontend: React, React Router, Redux Toolkit, React Hook Form, React
   DatePicker

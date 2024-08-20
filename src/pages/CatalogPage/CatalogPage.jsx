@@ -3,17 +3,17 @@ import DocumentTitle from '../../components/DocumentTitle';
 import SideBar from '../../components/SideBar/SideBar';
 import Location from '../../components/Location/Location';
 import Filters from '../../components/Filters/Filters';
-import css from './CatalogPage.module.css';
+import Container from '../../components/ui/Container/Container';
 
 export default function CatalogPage() {
   return (
-    <div className={css.wrapper}>
+    <Container>
       <DocumentTitle>Catalog</DocumentTitle>
       <SideBar>
         <Location />
         <Filters />
       </SideBar>
       <Catalog />
-    </div>
+    </Container>
   );
 }

@@ -1,3 +1,19 @@
 .sidebar {
-  min-width: 360px;
+  /*  width: 100%; */
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar {
+    min-width: 248px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sidebar {
+    min-width: 300px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .sidebar {
+    min-width: 360px;
+  }
 }

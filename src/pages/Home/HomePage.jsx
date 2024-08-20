@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import DocumentTitle from '../../components/DocumentTitle';
 import Button from '../../components/ui/Button/Button';
 import css from './HomePage.module.css';
+import Icon from '../../components/ui/Icon/Icon';
 
 export default function HomePage() {
   return (
@@ -13,10 +14,10 @@ export default function HomePage() {
             Explore the Great Outdoors in Comfort and Style
           </h1>
           <p className={css.subtitle}>
-            Whether you're planning a weekend getaway or an epic road trip, our
-            premium campers are ready to take you there. From cozy family trips
-            to luxurious outdoor escapes, we have a wide range of campers to
-            suit every adventure. Book your camper today and start creating
+            Whether you&apos;re planning a weekend getaway or an epic road trip,
+            our premium campers are ready to take you there. From cozy family
+            trips to luxurious outdoor escapes, we have a wide range of campers
+            to suit every adventure. Book your camper today and start creating
             unforgettable memories on the open road.
           </p>
           <Link to="/catalog" className={css.link}>
@@ -32,19 +33,27 @@ export default function HomePage() {
         <h2 className={css.color + ' ' + css.heading}>How it works</h2>
         <ul className={css.list}>
           <li className={css.item}>
+            <Icon className={css.icon} id="logo" width={48} height={48} />
             <h3 className={css.title}> 1. Find a camping vehicle</h3>
             <p className={css.text}>
               Choose where and when you wish to pick up the vehicle.
             </p>
           </li>
-          <li>
+          <li className={css.item}>
+            <Icon
+              className={css.icon}
+              id="send-booking"
+              width={48}
+              height={48}
+            />
             <h3 className={css.title}>2. Send booking request</h3>
             <p className={css.text}>
               Send a booking request for the motorhome or caravan you want to
               rent.
             </p>
           </li>
-          <li className="item">
+          <li className={css.item}>
+            <Icon className={css.icon} id="key" width={48} height={48} />
             <h3 className={css.title}>3. Check in</h3>
             <p className={css.text}>
               Finish the booking and check in when the time comes. Have a nice

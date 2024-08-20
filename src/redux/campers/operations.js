@@ -4,7 +4,9 @@ import instance from '../../services/instance';
 export const fetchCampers = createAsyncThunk(
   'campers/fetchCampers',
   async (params, thunkAPI) => {
+    console.log(params);
     try {
+      console.log(params);
       const res = await instance.get(`/adverts`, { params });
       return {
         data: res.data,

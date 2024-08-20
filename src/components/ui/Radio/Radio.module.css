@@ -1,0 +1,6 @@
+.radioBtnInput {
+  display: none;
+}
+.radioBtnInput:checked + .BtnBox {
+  border: 1px solid var(--button) !important;
+}

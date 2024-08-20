@@ -12,7 +12,7 @@ import enGB from 'date-fns/locale/en-GB';
 registerLocale('en-GB', enGB);
 
 export default function BookingForm() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(null);
   return (
     <form className={css.form}>
       <h3 className={css.title}>Book your campervan now</h3>
@@ -34,7 +34,7 @@ export default function BookingForm() {
         closeOnScroll={true}
         locale="en-GB"
         formatWeekDay={nameOfDay => nameOfDay.substr(0, 3)}
-        /* selected={startDate} */
+        selected={startDate && startDate}
         onChange={date => setStartDate(date)}
         customInput={<DateInput className={css.input} />}
       />

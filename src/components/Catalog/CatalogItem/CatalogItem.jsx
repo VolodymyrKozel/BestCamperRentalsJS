@@ -34,7 +34,7 @@ export default function CatalogItem(props) {
         <Button variant="primary" size="medium">
           <Link
             className={css.link}
-            to={`/catalog/${props._id}`}
+            to={`/catalog/${props._id}/features`}
             state={location}>
             Show more
           </Link>

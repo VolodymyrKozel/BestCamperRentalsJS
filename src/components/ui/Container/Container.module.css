@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 992px;
+
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding: 0 48px;
+    display: flex;
+    gap: 48px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    gap: 64px;
+    padding: 0 64px;
+  }
+}
